@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-void printMatrix(int N, int matrix[][N]);
 
 int main(){
 
@@ -33,18 +32,19 @@ for(int i = 0; i < N; i++)
 	for(int j = 0; j < N; j++)
 		matris2[j][N-1-i] = matris1[i][j];}
 printf("Matrix1: \n");
-printMatrix(N, matris1);
-printf("Matrix2: \n");
-printMatrix(N, matris2);
-
-return 0;
-}
-
-void printMatrix(int N, int matrix[][N]){
 	for(int i = 0; i < N; i++){
 		for(int j = 0; j < N; j++){
-			printf("%d ",matrix[i][j]);
+			printf("%d ",matris1[i][j]);
 		}
 		printf("\n");
 	}
+printf("Matrix2: \n");
+for(int i = 0; i < N; i++){
+		for(int j = 0; j < N; j++){
+			printf("%d ",matris2[i][j]);
+		}
+		printf("\n");
+	}
+
+return 0;
 }
